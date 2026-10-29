@@ -2,6 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+ 
+}
+
+.discord {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
 }
 
 body {
@@ -10,15 +17,17 @@ body {
   color: white;
 }
 
-.discord {
-  display: flex;
-  height: 100vh;
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* SIDEBAR */
 
 .sidebar {
-  width: 240px;
+  width: 15%;
+  height: 100vh;
   background-color: #2b2d31;
   display: flex;
   flex-direction: column;
@@ -44,11 +53,24 @@ body {
   margin-bottom: 10px;
 }
 
-.channel {
+.channel button {
   padding: 9px;
-  color: #b5bac1;
+  background-color: #2b2d31;
+  border: none;
+  outline: none;
   border-radius: 5px;
   cursor: pointer;
+  color: white;
+}
+
+.channel {
+  padding: 9px;
+  background-color: #2b2d31;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
 }
 
 .channel:hover {
@@ -56,13 +78,27 @@ body {
   color: white;
 }
 
+/* USER AREA */
+
 .user-area {
-  margin-top: auto;
-  padding: 12px;
-  background-color: #232428;
+  min-height: 80px;
+  width: 15%;
+  box-sizing: border-box;
+
   display: flex;
+  flex-direction: row;
   align-items: center;
-  gap: 10px;
+  justify-content: flex-start;
+  gap: 30px;
+  border-radius: 15px;
+
+
+  padding: 15px;
+  background-color: #232428;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }
 
 .user-avatar {
@@ -99,6 +135,7 @@ body {
   height: 60px;
   padding: 10px 20px;
   border-bottom: 1px solid #232428;
+  display:flex;
 }
 
 .chat-header h2 {
@@ -132,6 +169,7 @@ body {
   padding: 15px;
   display: flex;
   gap: 10px;
+  align-items: flex-end;
 }
 
 .message-input input {

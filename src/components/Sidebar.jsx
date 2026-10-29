@@ -1,4 +1,4 @@
-import App from "../App.css";
+import { Link } from 'react-router-dom';
 
 function Sidebar() {
   return (
@@ -10,8 +10,12 @@ function Sidebar() {
       <div className="channel-section">
         <h3>CANAIS DE TEXTO</h3>
 
-        <div className="channel"># geral</div>
-        <div className="channel"># jogos</div>
+        <div className="channel" >
+          <Link to="/geral"># geral</Link>
+        </div>
+        <div className="channel">
+          <Link to="/midia"># midia</Link>
+          </div>
         <div className="channel"># imagens</div>
       </div>
 
@@ -19,15 +23,6 @@ function Sidebar() {
         <h3>CANAIS DE VOZ</h3>
 
         <div className="channel">🔊 Sala Geral</div>
-      </div>
-
-      <div className="user-area">
-        <div className="user-avatar">U</div>
-
-        <div>
-          <strong>Usuário</strong>
-          <span>Online</span>
-        </div>
       </div>
     </aside>
   );
