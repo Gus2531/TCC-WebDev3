@@ -15,7 +15,7 @@ function Sidebar() {
         </div>
         <div className="channel">
           <Link to="/midia"># midia</Link>
-          </div>
+        </div>
         <div className="channel"># imagens</div>
       </div>
 
