@@ -1,0 +1,200 @@
+
+.user-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: #232428;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.user-area:hover {
+  background-color: #35373c;
+}
+
+.user-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: #5865f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.user-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.user-info strong {
+  color: white;
+  font-size: 14px;
+}
+
+.user-info span {
+  color: #b5bac1;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+/* Fundo do pop-up */
+
+.profile-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Janela do perfil */
+
+.profile-popup {
+  position: relative;
+  width: 360px;
+  background-color: #313338;
+  padding: 25px;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.profile-popup h2 {
+  font-size: 20px;
+  margin: 0 0 25px;
+}
+
+.profile-close {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: #b5bac1;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.profile-close:hover {
+  color: white;
+}
+
+/* Foto */
+
+.profile-photo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.user-avatar.large {
+  width: 75px;
+  height: 75px;
+  font-size: 30px;
+}
+
+.change-photo {
+  background-color: #5865f2;
+  padding: 9px 13px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.change-photo:hover {
+  background-color: #4752c4;
+}
+
+/* Nickname */
+
+.profile-label {
+  display: block;
+  color: #b5bac1;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.profile-input {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #1e1f22;
+  border: 1px solid #1e1f22;
+  border-radius: 5px;
+  padding: 12px;
+  color: white;
+  outline: none;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.profile-input:focus {
+  border-color: #5865f2;
+}
+
+/* Salvar */
+
+.save-profile {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  background-color: #5865f2;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.save-profile:hover {
+  background-color: #4752c4;
+}
+
+.save-profile:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.photo-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.remove-photo {
+  background: none;
+  border: 1px solid #ed4245;
+  color: #ed4245;
+  padding: 9px 13px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.remove-photo:hover {
+  background-color: #ed4245;
+  color: white;
+}
+
+.remove-photo:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

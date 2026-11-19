@@ -6,7 +6,7 @@ import Geral from './pages/geral';
 import Login from './components/Login';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
-import { supabase } from "./lib/supabaseClient";
+import { supabase } from "./lib/supaBaseClient";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -70,9 +70,6 @@ function App() {
   return (
     <BrowserRouter>
       <div className="discord">
-        <button onClick={testarBanco}>
-  Testar banco
-</button>
         <Sidebar />
         <Usuario />
 
@@ -80,10 +77,6 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/geral" element={<Geral />} />
         </Routes>
-
-        <button onClick={() => supabase.auth.signOut()}>
-          Sair
-        </button>
       </div>
     </BrowserRouter>
   );
